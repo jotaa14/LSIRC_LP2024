@@ -18,8 +18,6 @@ void EditProduct(Management *management);
 void ProductEditStatus(Management *management, int id);
 //deleteProduct.c
 void DeleteProduct(Management *management);
-void CleanDataProduct(Product *product);
-void CleanDataProcess(Process *process);
 //outputProduct.c
 char* PrintProductCategory(Category category);
 void PrintProductsProcess(Product *product, int i);
