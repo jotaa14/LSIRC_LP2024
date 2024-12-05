@@ -53,12 +53,12 @@ extern "C" {
 #define EDIT_ORDER_GET_STATUS "Select new status: "
 
 //ORDER PRINT STUFF
-#define ORDER_PRINTD_HEADER     "----------Customer order---------|"
-#define ORDER_PRIORITY          "|\nOrder Priority: %p            |"
-#define ORDER_STATUS            "|\nOrder Status: %p              |"
-#define ORDER_FULFILLMENT       "|\nOrder Fulfillment: %p         |"
-#define ORDER_CUSTOMER          "|\nOrder Customer: %p            |"
-#define ORDER_PRODUCTS          "|\nOrder Products: %p            |"
+#define ORDER_PRINTD_HEADER     "----------Customer order---------"
+#define ORDER_PRIORITY          "Order Priority: %s              \n"
+#define ORDER_STATUS            "Order Status: %s                \n"
+#define ORDER_FULFILLMENT       "Order Fulfillment: %d         \n"
+#define ORDER_CUSTOMER          "Order Customer: %d            \n"
+#define ORDER_PRODUCTS          "Order Products: %d            \n"
    
 //ORDER LIST MENU    
 #define ORDER_LIST_MENU_HEADER   "------------REPORT MENU-----------"
@@ -71,4 +71,3 @@ extern "C" {
 #endif
 
 #endif /* DESIGNORDERS_H */
-
