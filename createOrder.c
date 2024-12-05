@@ -30,13 +30,13 @@ void CreateOrder(Management *management) {
 
     management->order[management->order_counter]->fulfillment = GetInt(MIN_FULFILLMENT_VALUE, MAX_FULFILLMENT_VALUE, GET_ORDER_FULFILLMENT_VALUE);
 
-    //AssociateCustomerWithOrder(management);
-    //AssociateProductWithOrder(management);
+    
             
     management->order_counter++;
 }
-/*
+
 void AssociateCustomerWithOrder(Management *management) {
+    int customer_id;
     if (management->customer_counter <= 0) {
         puts(ERROR_CUSTOMER_EMPTY);
         puts(CREATE_NEW_CUSTOMER);
@@ -44,13 +44,14 @@ void AssociateCustomerWithOrder(Management *management) {
     }
 
     do {
-    int customer_id = ChooseCustomer(management);
+    customer_id = ChooseCustomer(management);
     } while (customer_id == -1);
 
     management->order[management->order_counter]->customerID = management->customer[customer_id]->id;
 }
 
 void AssociateProductWithOrder(Management *management) {
+    int product_id;
     if (management->product_counter <= 0) {
         puts(ERROR_NO_PRODUCTS);
         puts(CREATE_NEW_PRODUCTS);
@@ -64,4 +65,3 @@ void AssociateProductWithOrder(Management *management) {
     management->order[management->order_counter]->productID = management->product[product_id]->id;
     management->product[product_id]->used_by_order++;
 }
-*/
