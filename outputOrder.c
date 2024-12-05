@@ -16,11 +16,14 @@ char* PrintOrderStatus(StatusOrder statusorder) {
     }
 }
 
-int PrintOrders(Order *order){  //ARGUMRNTO TEM DE SER ORDER *order MUDAR
+int PrintOrders(Order *order){
     puts(ORDER_PRINTD_HEADER);
-    printf("Registration date: %02d-%02d-%02d",order->registration_day,order->registration_month,order->registration_year );
-    printf(ORDER_PRIORITY, order->priority);
-    printf(ORDER_STATUS, order->statusorder);
+    printf("Registration date: %d-%d-%d\n", 
+            order->registration_day,
+            order->registration_month,
+            order->registration_year );
+    printf(ORDER_PRIORITY, PrintOrderPriority(order->priority));
+    printf(ORDER_STATUS, PrintOrderStatus(order->statusorder));
     printf(ORDER_FULFILLMENT, order->fulfillment);
     printf(ORDER_CUSTOMER, order->customerID);
     printf(ORDER_PRODUCTS, order->productID);
