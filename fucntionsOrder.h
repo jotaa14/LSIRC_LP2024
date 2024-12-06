@@ -9,7 +9,7 @@ extern "C" {
 int GetOrderPosition(Management management, int number);
 //createOrder.c
 void CreateOrder(Management *management);
-//void AssociateCustomerWithOrder(Management *management);
+void AssociateCustomerWithOrder(Management *management);
 //void AssociateProductWithOrder(Management *management);
 //editOrder.c
 void EditOrder (Management *management);
