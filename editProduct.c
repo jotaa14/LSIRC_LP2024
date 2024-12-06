@@ -3,6 +3,9 @@
 void EditProduct(Management *management){
     int menu;
     ListProducts(management);
+    if(management->product_counter==0){
+        return;
+    }
     int id = GetProductPosition(*management, GetInt(MIN_SIZE, PRODUCTS_SIZE, MSG_GET_PRODUCT));
     
     if(id==-1){
@@ -73,6 +76,9 @@ void ProductEditStatus(Management *management, int id) {
 void EditProcess(Management *management){
     int product_id, process_id;
     ListProducts(management);
+    if(management->product_counter==0){
+        return;
+    }
     do{
         product_id = ChooseProduct(management);
         if(product_id==-1){
@@ -81,6 +87,9 @@ void EditProcess(Management *management){
     }while(product_id==-1);
     
     ListProductsProcesses(management, product_id);
+    if(management->product[product_id]->process_counter==0){
+        return;
+    }
     do{
         process_id = ChooseProcess(management, product_id);
         if(process_id==-1){
