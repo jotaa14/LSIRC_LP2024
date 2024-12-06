@@ -7,6 +7,7 @@ extern "C" {
 
 //utilCustomer.c
 int GetCustomerPosition(Management management, int num);
+int ChooseCustomer(Management *management);
 //createCustomer.c
 void CreateCustomers(Management *management);
 //editCustomer.c
