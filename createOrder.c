@@ -47,7 +47,8 @@ void AssociateCustomerWithOrder(Management *management) {
     customer_id = ChooseCustomer(management);
     } while (customer_id == -1);
 
-    management->order[management->order_counter]->customerID = management->customer[customer_id]->id;
+    management->order[management->order_counter]->customer = management->customer[customer_id];
+    management->customer[customer_id]->used_by_order++;
 }
 
 void AssociateProductWithOrder(Management *management) {
@@ -59,9 +60,9 @@ void AssociateProductWithOrder(Management *management) {
     }
 
     do {
-    int product_id = ChooseProduct(management);
+    product_id = ChooseProduct(management);
     } while (product_id == -1);
 
-    management->order[management->order_counter]->productID = management->product[product_id]->id;
+    management->order[management->order_counter]->product = management->product[product_id];
     management->product[product_id]->used_by_order++;
 }
