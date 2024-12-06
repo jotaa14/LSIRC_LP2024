@@ -2,6 +2,9 @@
 
 void DeleteProduct(Management *management) {
     ListProducts(management);
+    if(management->product_counter==0){
+        return;
+    }
     int id = GetProductPosition(*management, GetInt(MIN_SIZE, PRODUCTS_SIZE, MSG_GET_PRODUCT));
 
     if (id == -1) {
