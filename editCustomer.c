@@ -37,15 +37,6 @@ void EditCustomer(Management *management) {
                 management->customer[id]->nif = GetInt(CUSTOMER_NIF_SIZE_MIN, CUSTOMER_NIF_SIZE_MAX, CUSTOMER_NIF);
                 break;
             case 5:
-                management->customer[id]->registration_day = GetInt(MIN_DAY, MAX_DAY, CUSTOMER_DAY);
-                break;
-            case 6:
-                management->customer[id]->registration_month = GetInt(MIN_MONTH, MAX_MONTH, CUSTOMER_MONTH);
-                break;
-            case 7:
-                management->customer[id]->registration_year = GetInt(MIN_YEAR, MAX_YEAR, CUSTOMER_YEAR);
-                break;
-            case 8:
                 CustomerEditStatus(management, id);
                 break;
             case 0:
