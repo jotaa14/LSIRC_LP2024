@@ -20,12 +20,11 @@ int ChooseProduct(Management *management){
     return product_choice-1;
 }
 
-int ChooseProcess(Management *management){
-    int product_id = ChooseProduct(management);
+int ChooseProcess(Management *management, int product_id){   
     ListProductsProcesses(management, product_id);
     int process_id = GetInt(MIN_SIZE, PROCESS_SIZE, MSG_GET_PROCESS);
     if(process_id < 0 || process_id > management->product[product_id]->process_counter){
-        puts(ERROR_NO_PROCESSES);
+        puts(ERROR_NO_PROCESS);
         return -1;
     }
     return process_id-1;
