@@ -40,8 +40,10 @@ void ListMachines(Management *management) {
         }
         if (!found) {
             puts(ERROR_NO_MACHINES);
+            return;
         }
     } else {
         puts(ERROR_NO_MACHINES);
+        return;
     }
 }
