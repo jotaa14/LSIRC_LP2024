@@ -28,18 +28,6 @@ void EditProduct(Management *management){
                 ACCESS_TO_PRODUCT_CATEGORY_BY_ID = (Category)category;
                 break;
             case 3:
-                //ACCESS_TO_PRODUCT_MACHINEID_BY_ID = GetInt(MIN_SIZE_MACHINE, MACHINES_SIZE, MSG_GET_MACHINE);
-                break;
-            case 4:
-                //ACCESS_TO_PRODUCT_HOURS_WASTED_BY_ID = GetInt(MIN_HOURS_WASTED, MAX_HOURS_WASTED, MSG_GET_HOURS_WASTED);
-                break;
-            case 5:
-               // ACCESS_TO_PRODUCT_MINUTES_WASTED_BY_ID = GetInt(MIN_MINUTES_WASTED, MAX_MINUTES_WASTED, MSG_GET_MINUTES_WASTED);
-                break;
-            case 6:
-              //  ACCESS_TO_PRODUCT_SECONDS_WASTED_BY_ID = GetInt(MIN_SECONDS_WASTED, MAX_SECONDS_WASTED, MSG_GET_SECONDS_WASTED);
-                break;
-            case 7:
                 ProductEditStatus(management, id);
                 break;
             case 0:
