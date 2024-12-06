@@ -8,7 +8,7 @@ extern "C" {
 //utilProduct.c
 int GetProductPosition(Management management, int number);
 int ChooseProduct(Management *management);
-int ChooseProcess(Management *management);
+int ChooseProcess(Management *management, int product_id);
 //createProduct.c
 void CreateProduct(Management *management);
 void AssociateMachineWithProduct (Management *management);
@@ -17,6 +17,7 @@ void TotalTimeProduct(Management *management);
 //editProduct.c
 void EditProduct(Management *management);
 void ProductEditStatus(Management *management, int id);
+void EditProcess(Management *management);
 //deleteProduct.c
 void DeleteProduct(Management *management);
 //outputProduct.c
