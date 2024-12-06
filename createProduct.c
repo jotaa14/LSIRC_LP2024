@@ -26,13 +26,13 @@ void CreateProduct(Management *management) {
     puts(CREATE_PRODUCT_CATEGORY);
     int category = ProductCategoryMenu();
     ACCESS_TO_PRODUCT_CATEGORY = (Category) category;
-    
+
     ProcessMenu(management);
-    
+
     TotalTimeProduct(management);
-    
+
     strcpy(ACCESS_TO_PRODUCT_STATUS, "Active");
-    
+
     puts("Enter Product Price(euros): ");
     scanf("%f", &management->product[management->product_counter]->pvp);
 
@@ -44,19 +44,19 @@ void CreateProduct(Management *management) {
 void AssociateMachineWithProduct(Management *management) {
     int machine_id;
     if (management->machine_counter > 0) {
-        do{
+        do {
             machine_id = ChooseMachine(management);
-        }while(machine_id == -1);
-       
+        } while (machine_id == -1);
+
         management->product[management->product_counter]->process[management->product[management->product_counter]->process_counter]->machine = management->machine[machine_id];
         management->machine[machine_id]->used_by_product++;
     } else {
         int machine_id;
         CreateMachine(management);
-        do{
+        do {
             machine_id = ChooseMachine(management);
-        }while(machine_id == -1);
-        
+        } while (machine_id == -1);
+
         management->product[management->product_counter]->process[management->product[management->product_counter]->process_counter]->machine = management->machine[machine_id];
         management->machine[machine_id]->used_by_product++;
     }
@@ -76,7 +76,7 @@ void ProcessMenu(Management *management) {
                 }
 
                 management->product[management->product_counter]->process[management->product[management->product_counter]->process_counter]->id = management->product[management->product_counter]->process_counter + 1;
-                
+
                 AssociateMachineWithProduct(management);
 
                 management->product[management->product_counter]->process[management->product[management->product_counter]->process_counter]->process_hours = GetInt(MIN_HOURS_WASTED, MAX_HOURS_WASTED, MSG_GET_HOURS_WASTED);
@@ -87,8 +87,6 @@ void ProcessMenu(Management *management) {
 
                 puts(CREATE_PRODUCT_REPORT);
                 fgets(management->product[management->product_counter]->process[management->product[management->product_counter]->process_counter]->report, REPORT_SIZE, stdin);
-
-                strcpy(management->product[management->product_counter]->process[management->product[management->product_counter]->process_counter]->status, "Active");
 
                 management->product[management->product_counter]->process_counter++;
 
@@ -102,19 +100,24 @@ void ProcessMenu(Management *management) {
     } while (menu != 2);
 }
 
-void TotalTimeProduct(Management *management){
-    for(int i = 0; i<management->product[management->product_counter]->process_counter; i++){
+void TotalTimeProduct(Management *management) {
+    for (int i = 0; i < management->product[management->product_counter]->process_counter; i++) {
         management->product[management->product_counter]->total_seconds = management->product[management->product_counter]->total_seconds + management->product[management->product_counter]->process[i]->process_seconds;
         management->product[management->product_counter]->total_minutes = management->product[management->product_counter]->total_minutes + management->product[management->product_counter]->process[i]->process_minutes;
         management->product[management->product_counter]->total_hours = management->product[management->product_counter]->total_hours + management->product[management->product_counter]->process[i]->process_hours;
     }
-    do{
-        management->product[management->product_counter]->total_seconds=management->product[management->product_counter]->total_seconds-60;
-        management->product[management->product_counter]->total_minutes= management->product[management->product_counter]->total_minutes +1;
-    }while(management->product[management->product_counter]->total_seconds>=60);
-    
-    do{
-        management->product[management->product_counter]->total_minutes=management->product[management->product_counter]->total_minutes-60;
-        management->product[management->product_counter]->total_hours= management->product[management->product_counter]->total_hours +1;
-    }while(management->product[management->product_counter]->total_minutes>=60);
+    do {
+        if (management->product[management->product_counter]->total_seconds >= 60) {
+            management->product[management->product_counter]->total_seconds = management->product[management->product_counter]->total_seconds - 60;
+            management->product[management->product_counter]->total_minutes = management->product[management->product_counter]->total_minutes + 1;
+        }
+    } while (management->product[management->product_counter]->total_seconds >= 60);
+
+    do {
+        if (management->product[management->product_counter]->total_minutes >= 60) {
+            management->product[management->product_counter]->total_minutes = management->product[management->product_counter]->total_minutes - 60;
+            management->product[management->product_counter]->total_hours = management->product[management->product_counter]->total_hours + 1;
+        }
+
+    } while (management->product[management->product_counter]->total_minutes >= 60);
 }
