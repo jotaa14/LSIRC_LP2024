@@ -22,6 +22,10 @@ void PrintProductsProcess(Product *product, int i) {
 }
 
 void ListProductsProcesses(Management *management, int product_id){
+    if(management->product_counter==0){
+        puts(ERROR_NO_PRODUCTS);
+        return;
+    }
     if(management->product[product_id]->process_counter>0){
         for (int i = 0; i < management->product[product_id]->process_counter; i++) {
             PrintProductsProcess(management->product[product_id], i);
