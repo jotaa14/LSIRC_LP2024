@@ -140,15 +140,13 @@ void OrderStatusMenuOutput() {
     puts(STATUS_OPEN_OPTION);
     puts(STATUS_PRODUCTION_OPTION);
     puts(STATUS_CLOSED_OPTION);
+    puts(STATUS_CANCELED_OPTION);
     puts(MENU_BOTTOM);
     puts(MENU_OPTION);
 }
 
 void OrderEditMenuOutput() {
     puts(ORDER_EDIT_MENU_HEADER);
-    puts(EDIT_ORDER_REGISTRATION_DAY);
-    puts(EDIT_ORDER_REGISTRATION_MONTH);
-    puts(EDIT_ORDER_REGISTRATION_YEAR);
     puts(EDIT_ORDER_PRIORITY);
     puts(EDIT_ORDER_STATUS);
     puts(EDIT_ORDER_FULFILLMENT);
