@@ -3,6 +3,9 @@
 void EditMachine (Management *management){
     int menu;
     ListMachines(management);
+    if(management->machine_counter==0){
+        return;
+    }
     int id = GetMachinePosition(*management, GetInt(MIN_SIZE, MACHINES_SIZE, MSG_GET_MACHINE));
     
     if(id==-1){
