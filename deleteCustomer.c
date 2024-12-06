@@ -1,50 +1,42 @@
 #include "functions.h"
 
-void CreateCustomers(Management *management){
-    if (management->customer_counter >= CUSTOMERS_SIZE) {
-        puts(ERROR_CUSTOMER_EXIST);
+void DeleteCustomer(Management *management) {
+    ListCustomers(management);
+    if(management->customer_counter==0){
         return;
     }
+    int id = GetCustomerPosition(*management, GetInt(MIN_CUSTOMERS_SIZE, CUSTOMERS_SIZE, CUSTOMER_ID));
 
-    management->customer[management->customer_counter] = malloc(sizeof (Customer));
-    if (management->customer[management->customer_counter] == NULL) {
-        puts(ERROR_MEMORY_ALLOCATION);
+    if (id == -1) {
+        puts(ERROR_CATEGORY_EMPTY);
         return;
     }
+    if (strcmp(management->customer[id]->status, "Inactive") == 0) {
 
-    management->customer[management->customer_counter]->id = management->customer_counter + 1;
-    ClearInputBuffer();
+        free(management->customer[id]);
 
-    printf(CUSTOMER_NAME);
-    fgets(management->customer[management->customer_counter]->name, CUSTOMERS_SIZE, stdin);
+        for (int i = id; i < management->customer_counter - 1; i++) {
+            management->customer[i] = management->customer[i + 1];
+            management->customer[i]->id = i + 1;
+        }
 
-    size_t len = strlen(management->customer[management->customer_counter]->name);
-    if (len > 0 && management->customer[management->customer_counter]->name [len - 1] == '\n') {
-        management->customer[management->customer_counter]->name [len - 1] = '\0';
+        management->customer[management->customer_counter - 1] == NULL;
+
+        management->customer_counter--;
+
+        puts(CUSTOMER_DELETED);
+    } else {
+        puts(ERROR_CUSTOMER_DELETE_STATUS);
     }
+}
 
-    management->customer[management->customer_counter]->phone_number = GetInt(CUSTOMER_PHONE_NUMBER_SIZE_MIN, CUSTOMER_PHONE_NUMBER_SIZE_MAX, CUSTOMER_PHONE_NUMBER);
-
-    printf(CUSTOMER_EMAIL);
-    fgets(management->customer[management->customer_counter]->email, CUSTOMER_EMAIL_SIZE, stdin);
-    
-    size_t leni = strlen(management->customer[management->customer_counter]->email);
-    if (leni > 0 && management->customer[management->customer_counter]->email [leni - 1] == '\n') {
-        management->customer[management->customer_counter]->email [leni - 1] = '\0';
-    }
-
-    management->customer[management->customer_counter]->nif = GetInt(CUSTOMER_NIF_SIZE_MIN, CUSTOMER_NIF_SIZE_MAX, CUSTOMER_NIF);
-    
-    time_t now = time(NULL); 
-    struct tm *local_time = localtime(&now); 
-
-    // Atribuir a data do sistema ao cliente
-    management->customer[management->customer_counter]->registration_day = local_time->tm_mday;
-    management->customer[management->customer_counter]->registration_month = local_time->tm_mon + 1; 
-    management->customer[management->customer_counter]->registration_year = local_time->tm_year + 1900; 
-    strcpy(management->customer[management->customer_counter]->status, "Active");
-
-    management->customer_counter++;
-
-    puts(CUSTOMER_CREATED);
+void CleanDataCustomer(Customer *customer) {
+    customer->id = 0;
+    strcpy(customer->name, "");
+    customer->phone_number = 0;
+    strcpy(customer->email, "");
+    customer->nif = 0;
+    customer->registration_day = 0;
+    customer->registration_month = 0;
+    customer->registration_year = 0;
 }
