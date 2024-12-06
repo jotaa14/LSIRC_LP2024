@@ -87,7 +87,6 @@ typedef struct {
     char name[PRODUCT_NAME_SIZE];
     Category category;
     char status[STATUS_SIZE];
-    int searched;
     int process_counter;
     Process *process[PROCESS_SIZE];
     float pvp;
