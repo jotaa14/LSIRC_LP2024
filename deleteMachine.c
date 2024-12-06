@@ -2,6 +2,9 @@
 
 void DeleteMachine(Management *management) {
     ListMachines(management);
+    if(management->machine_counter==0){
+        return;
+    }
     int id = GetMachinePosition(*management, GetInt(MIN_SIZE, PRODUCTS_SIZE, MSG_GET_PRODUCT));
 
     if (id == -1) {
