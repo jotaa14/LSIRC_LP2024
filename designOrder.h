@@ -26,6 +26,7 @@ extern "C" {
 //ERROR DESIGN    
 #define ERROR_ORDERS_REACHED "ERROR: Maximum number of orders reached!"    
 #define ERROR_ORDER_NOT_EXIST "ERROR: Order do not exist!"
+#define ERROR_STATUS_CANCELED_CANNOT_BE_SELECTED "ERROR: You Cannot Cancel this order becaus is in Production."
     
 //ORDER PRIORITY MENU        
 #define PRIORITY_MENU_HEADER "-----------PRIORITY MENU----------"
@@ -38,17 +39,15 @@ extern "C" {
 #define STATUS_OPEN_OPTION "| 1-Open                         |"
 #define STATUS_PRODUCTION_OPTION "| 2-Production                   |"
 #define STATUS_CLOSED_OPTION "| 3-Closed                       |"
+#define STATUS_CANCELED_OPTION "| 4-Canceled                     |"
 
 //EDIT ORDER MENU                    
 #define ORDER_EDIT_MENU_HEADER "----------EDIT ORDER MENU---------"
-#define EDIT_ORDER_REGISTRATION_DAY "|1-Edit Registration Day         |"
-#define EDIT_ORDER_REGISTRATION_MONTH "|2-Edit Registration Month       |"
-#define EDIT_ORDER_REGISTRATION_YEAR "|3-Edit Registration Year        |" 
-#define EDIT_ORDER_PRIORITY "|4-Edit Order Priority           |"
-#define EDIT_ORDER_STATUS "|5-Edit Order Status             |"
-#define EDIT_ORDER_FULFILLMENT "|6-Edit Order Fulfillment        |"
-#define EDIT_ORDER_CUSTOMER "|7-Edit Order Customer           |"
-#define EDIT_ORDER_PRODUCTS "|8-Edit Order Products           |"
+#define EDIT_ORDER_PRIORITY "|1-Edit Order Priority           |"
+#define EDIT_ORDER_STATUS "|2-Edit Order Status             |"
+#define EDIT_ORDER_FULFILLMENT "|3-Edit Order Fulfillment        |"
+#define EDIT_ORDER_CUSTOMER "|4-Edit Order Customer           |"
+#define EDIT_ORDER_PRODUCTS "|5-Edit Order Products           |"
 #define EDIT_ORDER_GET_PRIORITY "Select new priority: "
 #define EDIT_ORDER_GET_STATUS "Select new status: "
 
