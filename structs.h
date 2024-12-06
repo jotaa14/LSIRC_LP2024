@@ -105,8 +105,8 @@ typedef struct{
     Priority priority;
     StatusOrder statusorder;
     int fulfillment;
-    int customerID;
-    int productID;
+    Customer *customer;
+    Product *product;
 }Order;
 
 
