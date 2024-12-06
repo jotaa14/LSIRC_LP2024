@@ -34,10 +34,14 @@ void CreateCustomers(Management *management) {
     }
 
     management->customer[management->customer_counter]->nif = GetInt(CUSTOMER_NIF_SIZE_MIN, CUSTOMER_NIF_SIZE_MAX, CUSTOMER_NIF);
+    
+    time_t now = time(NULL); 
+    struct tm *local_time = localtime(&now); 
 
-    management->customer[management->customer_counter]->registration_day = GetInt(MIN_DAY, MAX_DAY, CUSTOMER_DAY);
-    management->customer[management->customer_counter]->registration_month = GetInt(MIN_MONTH, MAX_MONTH, CUSTOMER_MONTH);
-    management->customer[management->customer_counter]->registration_year = GetInt(MIN_YEAR, MAX_YEAR, CUSTOMER_YEAR);
+    // Atribuir a data do sistema ao cliente
+    management->customer[management->customer_counter]->registration_day = local_time->tm_mday;
+    management->customer[management->customer_counter]->registration_month = local_time->tm_mon + 1; 
+    management->customer[management->customer_counter]->registration_year = local_time->tm_year + 1900; 
     strcpy(management->customer[management->customer_counter]->status, "Active");
 
     management->customer_counter++;
