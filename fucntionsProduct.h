@@ -8,6 +8,7 @@ extern "C" {
 //utilProduct.c
 int GetProductPosition(Management management, int number);
 int ChooseProduct(Management *management);
+int ChooseProcess(Management *management);
 //createProduct.c
 void CreateProduct(Management *management);
 void AssociateMachineWithProduct (Management *management);
@@ -21,7 +22,7 @@ void DeleteProduct(Management *management);
 //outputProduct.c
 char* PrintProductCategory(Category category);
 void PrintProductsProcess(Product *product, int i);
-void ListProductsProcesses(Management *management);
+void ListProductsProcesses(Management *management, int product_id);
 void PrintProducts(Product *product);
 void ListProducts(Management *management);
 void ListProductsByCategories(Management *management);
