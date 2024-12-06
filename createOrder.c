@@ -30,7 +30,7 @@ void CreateOrder(Management *management) {
 
     management->order[management->order_counter]->fulfillment = GetInt(MIN_FULFILLMENT_VALUE, MAX_FULFILLMENT_VALUE, GET_ORDER_FULFILLMENT_VALUE);
 
-    
+    AssociateCustomerWithOrder(management);
             
     management->order_counter++;
 }
@@ -63,6 +63,6 @@ void AssociateProductWithOrder(Management *management) {
     product_id = ChooseProduct(management);
     } while (product_id == -1);
 
-    management->order[management->order_counter]->product = management->product[product_id];
+    //management->order[management->order_counter]->product = management->product[product_id];
     management->product[product_id]->used_by_order++;
 }
