@@ -69,3 +69,25 @@ void ProductEditStatus(Management *management, int id) {
         }
     } while (menu<1 && menu>2);
 }
+
+void EditProcess(Management *management){
+    int product_id, process_id;
+    ListProducts(management);
+    do{
+        product_id = ChooseProduct(management);
+        if(product_id==-1){
+            puts(ERROR_PRODUCT_NOT_EXIST);
+        }
+    }while(product_id==-1);
+    
+    ListProductsProcesses(management, product_id);
+    do{
+        process_id = ChooseProcess(management, product_id);
+        if(process_id==-1){
+            puts(ERROR_PROCESS_NOT_EXIST);
+        }
+    }while(process_id==-1);
+    
+    
+    
+}
