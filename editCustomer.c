@@ -3,6 +3,9 @@
 void EditCustomer(Management *management) {
     int menu;
     ListCustomers(management);
+    if(management->customer_counter==0){
+        return;
+    }
     int id = GetCustomerPosition(*management, GetInt(MIN_CUSTOMERS_SIZE, CUSTOMERS_SIZE, CUSTOMER_ID));
 
     if (id == -1) {
