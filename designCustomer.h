@@ -18,10 +18,7 @@ extern "C" {
 #define EDIT_CUSTOMER_PHONE_NUMBER "| 2-Edit Customer Phone Number      |"   
 #define EDIT_CUSTOMER_EMAIL        "| 3-Edit Customer Email             |"
 #define EDIT_CUSTOMER_NIF          "| 4-Edit Customer Nif               |"
-#define EDIT_CUSTOMER_DAY          "| 5-Edit Customer Registration Day  |"
-#define EDIT_CUSTOMER_MONTH        "| 6-Edit Customer Registration Month|"
-#define EDIT_CUSTOMER_YEAR         "| 7-Edit Customer Registration Year |"
-#define EDIT_CUSTOMER_STATUS       "| 8-Edit Customer Status            |"
+#define EDIT_CUSTOMER_STATUS       "| 5-Edit Customer Status            |"
 #define EDIT_CUSTOMER_END          "| 0-Exit                            |"    
   
 //CUSTOMER LIST MEMU DESIGN    
