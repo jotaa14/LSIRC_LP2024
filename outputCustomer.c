@@ -22,8 +22,10 @@ void ListCustomers(Management *management) {
 
         if (!found) {
             puts(ERROR_CATEGORY_EMPTY);
+            return;
         }
     } else {
         puts(ERROR_CATEGORY_EMPTY);
+        return;
     }
 }
