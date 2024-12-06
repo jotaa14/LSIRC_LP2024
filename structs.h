@@ -106,7 +106,7 @@ typedef struct{
     StatusOrder statusorder;
     int fulfillment;
     Customer *customer;
-    Product *product;
+    Product *product[PRODUCTS_SIZE];
 }Order;
 
 
