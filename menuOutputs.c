@@ -91,9 +91,6 @@ void CustomerEditMenuOutput() {
     puts(EDIT_CUSTOMER_PHONE_NUMBER);
     puts(EDIT_CUSTOMER_EMAIL);
     puts(EDIT_CUSTOMER_NIF);
-    puts(EDIT_CUSTOMER_DAY);
-    puts(EDIT_CUSTOMER_MONTH);
-    puts(EDIT_CUSTOMER_YEAR);
     puts(EDIT_CUSTOMER_STATUS);
     puts(EDIT_CUSTOMER_END);
     puts(MENU_BOTTOM);
