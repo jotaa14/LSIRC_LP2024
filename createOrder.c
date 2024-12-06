@@ -15,10 +15,13 @@ void CreateOrder(Management *management) {
 
     management->order[management->order_counter]->orderid = management->order_counter + 1;
     ClearInputBuffer();
+    
+    time_t now = time(NULL); 
+    struct tm *local_time = localtime(&now); 
 
-    management->order[management->order_counter]->registration_day = GetInt(MIN_DATE_DAY, MAX_DATE_DAY, GET_ORDER_DATE_DAY);
-    management->order[management->order_counter]->registration_month = GetInt(MIN_DATE_MONTH, MAX_DATE_MONTH, GET_ORDER_DATE_MONTH);
-    management->order[management->order_counter]->registration_year = GetInt(MIN_DATE_YEAR, MAX_DATE_YEAR, GET_ORDER_DATE_YEAR);
+    management->order[management->order_counter]->registration_day = local_time->tm_mday;
+    management->order[management->order_counter]->registration_month = local_time->tm_mon + 1; 
+    management->order[management->order_counter]->registration_year = local_time->tm_year + 1900; 
 
     puts(CREATE_ORDER_PRIORITY);
     int priority = OrderPriorityMenu();
@@ -28,7 +31,7 @@ void CreateOrder(Management *management) {
     int statusorder = OrderStatusMenu();
     management->order[management->order_counter]->statusorder = (StatusOrder) statusorder;
 
-    management->order[management->order_counter]->fulfillment = GetInt(MIN_FULFILLMENT_VALUE, MAX_FULFILLMENT_VALUE, GET_ORDER_FULFILLMENT_VALUE);
+    management->order[management->order_counter]->fulfillment = 0;
 
     AssociateCustomerWithOrder(management);
             
