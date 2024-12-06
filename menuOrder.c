@@ -47,10 +47,10 @@ int OrderStatusMenu() {
         OrderStatusMenuOutput();
         scanf("%d", &status);
 
-        if (status < 1 || status > 3) {
+        if (status < 1 || status > 4) {
             puts(ERROR_MENU);
         }
-    } while (status < 1 || status > 3);
+    } while (status < 1 || status > 4);
 
     return status - 1;
 }
