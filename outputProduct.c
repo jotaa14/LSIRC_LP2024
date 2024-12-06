@@ -22,8 +22,7 @@ void PrintProductsProcess(Product *product, int i) {
     puts(MENU_BOTTOM);
 }
 
-void ListProductsProcesses(Management *management){
-    int product_id = ChooseProduct(management);
+void ListProductsProcesses(Management *management, int product_id){
     if(management->product[product_id]->process_counter>0){
         for (int i = 0; i < management->product[product_id]->process_counter; i++) {
             PrintProductsProcess(management->product[product_id], i);
