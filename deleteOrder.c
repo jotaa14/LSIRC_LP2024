@@ -2,13 +2,17 @@
 
 void DeleteOrder(Management *management) {
     ListOrders(management);
+    if(management->order_counter==0){
+        return;
+    }
     int id = GetOrderPosition(*management, GetInt(MIN_SIZE, ORDERS_SIZE, MSG_GET_ORDER));
 
     if (id == -1) {
         puts(ERROR_ORDER_NOT_EXIST);
         return;
     }
-    if (management->order[id]->statusorder == 2) {
+    
+    if (management->order[id]->statusorder == 2 || management->order[id]->statusorder == 3) {
         free(management->order[id]);
 
         for (int i = id; i < management->order_counter - 1; i++) {
