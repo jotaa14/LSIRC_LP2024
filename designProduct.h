@@ -50,12 +50,8 @@ extern "C" {
 //EDIT PRODUCT MENU DESIGN       
 #define PRODUCT_EDIT_MENU_HEADER "---------EDIT PRODUCT MENU--------"
 #define EDIT_PRODUCT_NAME "|1-Edit Product Name             |"
-#define EDIT_PRODUCT_CATEGORY "|2-Edit Product Category         |"
-#define EDIT_PRODUCT_MACHINEID      "|3-Edit Product Machine ID       |"  
-#define EDIT_PRODUCT_EXECUTION_HOURS "|4-Edit Product Execution Hours  |"
-#define EDIT_PRODUCT_EXECUTION_MINUTES "|5-Edit Product Execution Minutes|"
-#define EDIT_PRODUCT_EXECUTION_SECONDS "|6-Edit Product Execution Seconds|"
-#define EDIT_PRODUCT_STATUS "|7-Edit Product Status           |"
+#define EDIT_PRODUCT_CATEGORY "|2-Edit Product Category         |" 
+#define EDIT_PRODUCT_STATUS "|3-Edit Product Status           |"
 #define EDIT_PRODUCT_GET_NAME "Enter new product name: "
 #define EDIT_PRODUCT_GET_CATEGORY "Select new category: "
 
