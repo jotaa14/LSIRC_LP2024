@@ -1,6 +1,6 @@
 #include "functions.h"
 
-void CreateCustomers(Management *management) {
+void CreateCustomers(Management *management){
     if (management->customer_counter >= CUSTOMERS_SIZE) {
         puts(ERROR_CUSTOMER_EXIST);
         return;
@@ -38,7 +38,6 @@ void CreateCustomers(Management *management) {
     time_t now = time(NULL); 
     struct tm *local_time = localtime(&now); 
 
-    // Atribuir a data do sistema ao cliente
     management->customer[management->customer_counter]->registration_day = local_time->tm_mday;
     management->customer[management->customer_counter]->registration_month = local_time->tm_mon + 1; 
     management->customer[management->customer_counter]->registration_year = local_time->tm_year + 1900; 
