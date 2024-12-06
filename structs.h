@@ -45,7 +45,8 @@ typedef enum {
 typedef enum {
     STATUS_OPEN,
     STATUS_PRODUCTION,
-    STATUS_CLOSED        
+    STATUS_CLOSED,
+    STATUS_CANCELED
 } StatusOrder;
 
 typedef struct{
@@ -105,6 +106,7 @@ typedef struct{
     int fulfillment;
     Customer *customer;
     Product *product[PRODUCTS_SIZE];
+    int order_pvp;
 }Order;
 
 
