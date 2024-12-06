@@ -13,6 +13,7 @@ char* PrintOrderStatus(StatusOrder statusorder) {
         case STATUS_OPEN: return "Open";
         case STATUS_PRODUCTION: return "Production";
         case STATUS_CLOSED : return "Closed";
+        case STATUS_CANCELED : return"Canceled";
     }
 }
 
@@ -23,7 +24,6 @@ int PrintOrders(Order *order){
     printf(ORDER_STATUS, PrintOrderStatus(order->statusorder));
     printf(ORDER_FULFILLMENT, order->fulfillment);
     printf(ORDER_CUSTOMER, order->customer->id);
-    //printf(ORDER_PRODUCTS, order->productID);
     puts(MENU_BOTTOM);
 }
 
@@ -36,8 +36,10 @@ void ListOrders(Management *management) {
         }
         if(!found){
             puts(ERROR_ORDER_NOT_EXIST);
+            return;
         }
     }else{
         puts(ERROR_ORDER_NOT_EXIST);
+        return;
     }
 }
