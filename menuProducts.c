@@ -40,7 +40,8 @@ void ProductListMenu(Management *management) {
                 ListProductsByCategories(management);
                 break;
             case 3:
-                ListProductsProcesses(management);
+                int product_id = ChooseProduct(management);
+                ListProductsProcesses(management, product_id);
                 break;
             case 0:
                 break;
