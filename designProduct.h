@@ -7,6 +7,7 @@ extern "C" {
 
 //ERROR DESIGN
 #define ERROR_NO_PRODUCTS "ERROR: Product list is empty!"
+#define ERROR_NO_PROCESSES "ERROR: Process list is empty!"    
 #define ERROR_CATEGORY_EMPTY "ERROR: There's no product associated to the category!"
 #define ERROR_PRODUCT_NOT_EXIST "ERROR: Product do not exist!"
 #define ERROR_NO_ONE_CATEGORY_SELECTED "ERROR: No category selected! Product creation canceled!"
@@ -15,6 +16,7 @@ extern "C" {
 
 //GET MESSAGES DESIGN
 #define MSG_GET_PRODUCT "Introduce the product ID: "
+#define MSG_GET_PROCESS "Introduce the process ID: "    
 #define MSG_GET_HOURS_WASTED "Introduce the hours wasted to produce the product: "
 #define MSG_GET_MINUTES_WASTED "Introduce the minutes wasted to produce the product: "
 #define MSG_GET_SECONDS_WASTED "Introduce the seconds wasted to produce the product: "
