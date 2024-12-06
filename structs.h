@@ -79,7 +79,6 @@ typedef struct{
     int process_minutes;
     int process_seconds;
     char report[REPORT_SIZE];
-    char status[STATUS_SIZE];
 }Process;
 
 typedef struct {
