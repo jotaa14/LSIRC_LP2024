@@ -18,7 +18,6 @@ void PrintProductsProcess(Product *product, int i) {
     printf(PROCESS_MACHINE, product->process[i]->machine->id);
     printf(PROCESS_TIME, product->process[i]->process_hours, product->process[i]->process_minutes, product->process[i]->process_seconds);
     printf(PROCESS_REPORT, product->process[i]->report);
-    printf(PROCESS_STATUS, product->process[i]->status);
     puts(MENU_BOTTOM);
 }
 
@@ -51,9 +50,11 @@ void ListProducts(Management *management) {
         }
         if (!found) {
             puts(ERROR_NO_PRODUCTS);
+            return;
         }
     } else {
         puts(ERROR_NO_PRODUCTS);
+        return;
     }
 }
 
