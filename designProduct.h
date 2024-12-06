@@ -6,10 +6,10 @@ extern "C" {
 #endif
 
 //ERROR DESIGN
-#define ERROR_NO_PRODUCTS "ERROR: Product list is empty!"
-#define ERROR_NO_PROCESSES "ERROR: Process list is empty!"    
+#define ERROR_NO_PRODUCTS "ERROR: Product list is empty!"   
 #define ERROR_CATEGORY_EMPTY "ERROR: There's no product associated to the category!"
 #define ERROR_PRODUCT_NOT_EXIST "ERROR: Product do not exist!"
+#define ERROR_PROCESS_NOT_EXIST "ERROR: Process do not exist!"
 #define ERROR_NO_ONE_CATEGORY_SELECTED "ERROR: No category selected! Product creation canceled!"
 #define ERROR_DELETE_STATUS "ERROR: Product cannot be deleted because status is Active!"
 #define ERROR_NO_PROCESS "ERROR: Process list is empty!"
