@@ -57,6 +57,7 @@ void CustomerEditStatus(Management *management, int id) {
     do {
         CustomerEditStatusMenuOutput();
         scanf("%d", &menu);
+        ClearInputBuffer();
         switch (menu) {
             case 1:
                 strcpy(management->customer[id]->status, "Active");
