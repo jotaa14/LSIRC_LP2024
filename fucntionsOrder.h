@@ -7,6 +7,7 @@ extern "C" {
 
 //utilOrder.c
 int GetOrderPosition(Management management, int number);
+void AssociateStatusToFulfillment (Management *management, int id);
 //createOrder.c
 void CreateOrder(Management *management);
 void AssociateCustomerWithOrder(Management *management);
@@ -24,7 +25,6 @@ void ListOrders(Management *management);
 void OrderMenu(Management *management);
 void OrderListMenu(Management *management);
 int OrderPriorityMenu();
-int OrderStatusMenu();
 
 
 #ifdef __cplusplus
