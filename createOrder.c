@@ -1,7 +1,6 @@
 #include "functions.h"
 
 void CreateOrder(Management *management) {
-
     if (management->order_counter >= ORDERS_SIZE) {
         puts(ERROR_ORDERS_REACHED);
         return;
@@ -14,7 +13,6 @@ void CreateOrder(Management *management) {
     }
 
     management->order[management->order_counter]->orderid = management->order_counter + 1;
-    ClearInputBuffer();
     
     time_t now = time(NULL); 
     struct tm *local_time = localtime(&now); 
@@ -42,7 +40,6 @@ void AssociateCustomerWithOrder(Management *management) {
     int customer_id;
     if (management->customer_counter <= 0) {
         puts(ERROR_CUSTOMER_EMPTY);
-        puts(CREATE_NEW_CUSTOMER);
         CreateCustomers(management);
     }
 
