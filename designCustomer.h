@@ -53,7 +53,7 @@ extern "C" {
 #define CUSTOMER_YEAR "Year: "
 #define CUSTOMER_STATUS "Customer status: "       
 
-#define ERROR_CUSTOMER_EMPTY "ERROR: There's no customer associated!"
+#define ERROR_CUSTOMER_EMPTY "ERROR: Customers list is empty!"
 #define ERROR_CUSTOMER_EXIST "The customer already exists!"
 #define ERROR_CUSTOMER_FULL_LIST "The list is full!"
 #define ERROR_CUSTOMER_DELETE_STATUS "ERROR: Customer cannot be deleted because status is Active!"
