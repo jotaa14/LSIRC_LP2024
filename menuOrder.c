@@ -42,20 +42,6 @@ int OrderPriorityMenu() {
     return priority - 1;
 }
 
-int OrderStatusMenu() {
-    int status;
-    do {
-        OrderStatusMenuOutput();
-        scanf("%d", &status);
-        ClearInputBuffer();
-        if (status < 1 || status > 4) {
-            puts(ERROR_MENU);
-        }
-    } while (status < 1 || status > 4);
-
-    return status - 1;
-}
-
 void OrderListMenu(Management *management) {
     int menu;
     do {
