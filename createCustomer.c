@@ -13,7 +13,6 @@ void CreateCustomers(Management *management){
     }
 
     management->customer[management->customer_counter]->id = management->customer_counter + 1;
-    ClearInputBuffer();
 
     printf(CUSTOMER_NAME);
     fgets(management->customer[management->customer_counter]->name, CUSTOMERS_SIZE, stdin);
