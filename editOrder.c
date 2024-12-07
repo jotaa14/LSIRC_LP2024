@@ -24,19 +24,20 @@ void EditOrder (Management *management){
                 management->order[id]->priority = (Priority)priority;
                 break;
             case 2:
-                int statusorder;
-                puts(EDIT_ORDER_GET_STATUS);
-                do{
-                    statusorder = OrderStatusMenu();
-                    management->order[id]->statusorder = (StatusOrder)statusorder;
-                    if(statusorder==3 && management->order[id]->fulfillment>0){
-                        puts(ERROR_STATUS_CANCELED_CANNOT_BE_SELECTED);
-                        statusorder=-1;
-                    }
-                }while(statusorder=-1);
+                if(management->order[id]->statusorder != 3){
+                    management->order[id]->fulfillment = GetInt(MIN_FULFILLMENT_VALUE, MAX_FULFILLMENT_VALUE, GET_ORDER_FULFILLMENT_VALUE);
+                    AssociateStatusToFulfillment (management, id);
+                }else{
+                 puts(ERROR_ORDER_ALREADY_CANCELED);   
+                }
                 break;
             case 3:
-                management->order[id]->fulfillment = GetInt(MIN_FULFILLMENT_VALUE, MAX_FULFILLMENT_VALUE, GET_ORDER_FULFILLMENT_VALUE);
+                if(management->order[id]->fulfillment==0){
+                    int statusorder = 3;
+                    management->order[id]->statusorder = (StatusOrder) statusorder;
+                }else{
+                    puts(ERROR_STATUS_CANCELED_CANNOT_BE_SELECTED);
+                }
                 break;
             case 4:
                 
