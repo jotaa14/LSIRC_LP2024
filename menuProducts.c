@@ -5,6 +5,7 @@ void ProductMenu(Management *management) {
     do {
         ProductMenuOutput();
         scanf("%d", &menu);
+        ClearInputBuffer();
         switch (menu) {
             case 1:
                 CreateProduct(management);
@@ -32,6 +33,7 @@ void ProductListMenu(Management *management) {
     do {
         ProductListMenuOutput();
         scanf("%d", &menu);
+        ClearInputBuffer();
         switch (menu) {
             case 1:
                 ListProducts(management);
@@ -57,7 +59,7 @@ int ProductCategoryMenu() {
     do {
         ProductCategoryMenuOutput();
         scanf("%d", &category);
-
+        ClearInputBuffer();
         if (category < 1 || category > 7) {
             puts(ERROR_MENU);
         }
