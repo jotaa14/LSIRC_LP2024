@@ -5,21 +5,21 @@
 extern "C" {
 #endif
 
-//CUSTOMER MENU DESIGN
-#define CUSTOMER_MENU_HEADER "------------CUSTOMER MENU-----------"
-#define CUSTOMER_CREATE      "| 1-Create Customer                |"
-#define CUSTOMER_EDIT        "| 2-Edit Customer                  |"
-#define CUSTOMER_DELETE      "| 3-Delete Customer                |"
-#define CUSTOMER_LIST        "| 4-Reports Customers              |"
-    
-//CUSTOMER MENU DESIGN
-#define EDIT_CUSTOMER_HEADER       "----------EDIT CUSTOMER MENU---------"
-#define EDIT_CUSTOMER_NAME         "| 1-Edit Customer Name              |"   
-#define EDIT_CUSTOMER_PHONE_NUMBER "| 2-Edit Customer Phone Number      |"   
-#define EDIT_CUSTOMER_EMAIL        "| 3-Edit Customer Email             |"
-#define EDIT_CUSTOMER_NIF          "| 4-Edit Customer Nif               |"
-#define EDIT_CUSTOMER_STATUS       "| 5-Edit Customer Status            |"
-#define EDIT_CUSTOMER_END          "| 0-Exit                            |"    
+//CUSTOMER MENU DESIGN       
+#define CUSTOMER_MENU_HEADER "-----------CUSTOMER MENU----------"
+#define CUSTOMER_CREATE      "| 1-Create Customer              |"
+#define CUSTOMER_EDIT        "| 2-Edit Customer                |"
+#define CUSTOMER_DELETE      "| 3-Delete Customer              |"
+#define CUSTOMER_LIST        "| 4-Reports Customers            |"
+   
+//CUSTOMER MENU DESIGN             
+#define EDIT_CUSTOMER_HEADER       "---------EDIT CUSTOMER MENU-------"
+#define EDIT_CUSTOMER_NAME         "| 1-Edit Customer Name           |"   
+#define EDIT_CUSTOMER_PHONE_NUMBER "| 2-Edit Customer Phone Number   |"   
+#define EDIT_CUSTOMER_EMAIL        "| 3-Edit Customer Email          |"
+#define EDIT_CUSTOMER_NIF          "| 4-Edit Customer Nif            |"
+#define EDIT_CUSTOMER_STATUS       "| 5-Edit Customer Status         |"
+  
   
 //CUSTOMER LIST MEMU DESIGN    
 #define GET_CUSTOMER_ID "\nCustomer ID: %d"
@@ -33,17 +33,15 @@ extern "C" {
 #define GET_CUSTOMER_STATUS "Customer status: %s\n"    
 #define CUSTOMER_CREATED "\nCustomer created."
 
-//EDIT STATUS PRODUCT MENU DESIGN
-#define EDIT_CUSTOMER_STATUS_MENU_HEADER  "----------EDIT STATUS MENU----------"
-#define EDIT_CUSTOMER_ACTIVATE_STATUS     "| 1-Status: Active                 |"
-#define EDIT_CUSTOMER_INACTIVE_STATUS     "| 2-Status: Inactive               |"
-#define EDIT_CUSTOMER_STATUS_END          "| 0-Exit                           |"
+//EDIT STATUS PRODUCT MENU DESIGN         
+#define EDIT_CUSTOMER_STATUS_MENU_HEADER  "---------EDIT STATUS MENU---------"
+#define EDIT_CUSTOMER_ACTIVATE_STATUS     "| 1-Status: Active               |"
+#define EDIT_CUSTOMER_INACTIVE_STATUS     "| 2-Status: Inactive             |"
    
-//CUSTOMER LIST MENU DESIGN
-#define CUSTOMER_LIST_MENU_HEADER "---------CUSTOMER LIST MENU---------"
-#define LIST_CUSTOMER             "| 1-List Customers                 |"
-#define LIST_CUSTOMER_BY_NAME     "| 2-List Customers By NAME         |"    
-#define LIST_CUSTOMER_STATUS_END  "| 0-Exit                           |"
+//CUSTOMER LIST MENU DESIGN       
+#define CUSTOMER_LIST_MENU_HEADER "--------CUSTOMER LIST MENU--------"
+#define LIST_CUSTOMER             "| 1-List Customers               |"
+#define LIST_CUSTOMER_BY_NAME     "| 2-List Customers By NAME       |"    
 
 #define CUSTOMER_ID "Customer ID: "
 #define CUSTOMER_NAME "Customer name: "
@@ -61,8 +59,6 @@ extern "C" {
 #define ERROR_CUSTOMER_DELETE_STATUS "ERROR: Customer cannot be deleted because status is Active!"
     
 #define CUSTOMER_DELETED "Customer Deleted!"
-    
-#define CREATE_NEW_CUSTOMER "Create a new Customer:(PRESS ENTER)"
 
 
 
