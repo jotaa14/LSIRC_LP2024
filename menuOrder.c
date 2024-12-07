@@ -5,6 +5,7 @@ void OrderMenu(Management *management) {
     do {
         OrderMenuOutput();
         scanf("%d", &menu);
+        ClearInputBuffer();
         switch (menu) {
             case 1:
                 CreateOrder(management);
@@ -32,7 +33,7 @@ int OrderPriorityMenu() {
     do {
         OrderPriorityMenuOutput();
         scanf("%d", &priority);
-
+        ClearInputBuffer();
         if (priority < 1 || priority > 3) {
             puts(ERROR_MENU);
         }
@@ -46,7 +47,7 @@ int OrderStatusMenu() {
     do {
         OrderStatusMenuOutput();
         scanf("%d", &status);
-
+        ClearInputBuffer();
         if (status < 1 || status > 4) {
             puts(ERROR_MENU);
         }
@@ -60,6 +61,7 @@ void OrderListMenu(Management *management) {
     do {
         OrderListMenuOuput();
         scanf("%d", &menu);
+        ClearInputBuffer();
         switch (menu) {
             case 1:
                 ListOrders(management);
