@@ -25,11 +25,9 @@ void CreateOrder(Management *management) {
     int priority = OrderPriorityMenu();
     management->order[management->order_counter]->priority = (Priority) priority;
 
-    puts(CREATE_STATUS_PRIORITY);
-    int statusorder = OrderStatusMenu();
-    management->order[management->order_counter]->statusorder = (StatusOrder) statusorder;
-
     management->order[management->order_counter]->fulfillment = 0;
+    
+    AssociateStatusToFulfillment (management, management->order_counter);
 
     AssociateCustomerWithOrder(management);
             
