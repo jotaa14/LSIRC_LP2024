@@ -48,6 +48,7 @@ void ProductEditStatus(Management *management, int id) {
     do {
         ProductEditStatusMenuOutput();
         scanf("%d", &menu);
+        ClearInputBuffer();
         switch (menu) {
             case 1:
                 strcpy(ACCESS_TO_PRODUCT_STATUS_BY_ID, "Active");
