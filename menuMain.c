@@ -5,6 +5,7 @@ void Menu(Management *management) {
     do {
         MenuOutput();
         scanf("%d", &menu);
+        ClearInputBuffer();
         switch (menu) {
             case 1:
                 ProductMenu(management);
