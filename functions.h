@@ -56,7 +56,6 @@ void CustomerListMenuOutput();
 
 void OrderMenuOutput();
 void OrderPriorityMenuOutput();
-void OrderStatusMenuOutput();
 void OrderEditMenuOutput();
 void OrderListMenuOuput();
 
