@@ -20,13 +20,13 @@ extern "C" {
 #define GET_ORDER_DATE_MONTH "Enter the month of the order: "
 #define GET_ORDER_DATE_YEAR "Enter the year of the order: "
 #define CREATE_ORDER_PRIORITY "Select Priority Option: "
-#define CREATE_STATUS_PRIORITY "Select Status Option: "
 #define GET_ORDER_FULFILLMENT_VALUE "Enter the fulfillment value (0-100%): "
 
 //ERROR DESIGN    
 #define ERROR_ORDERS_REACHED "ERROR: Maximum number of orders reached!"    
 #define ERROR_ORDER_NOT_EXIST "ERROR: Order do not exist!"
-#define ERROR_STATUS_CANCELED_CANNOT_BE_SELECTED "ERROR: You Cannot Cancel this order becaus is in Production."
+#define ERROR_STATUS_CANCELED_CANNOT_BE_SELECTED "ERROR: You cannot cancel this order becaus is in Production."
+#define ERROR_ORDER_ALREADY_CANCELED "ERROR: You cannot edit order fulfillment because order was Canceled."
     
 //ORDER PRIORITY MENU        
 #define PRIORITY_MENU_HEADER "-----------PRIORITY MENU----------"
@@ -43,11 +43,11 @@ extern "C" {
 
 //EDIT ORDER MENU                    
 #define ORDER_EDIT_MENU_HEADER "----------EDIT ORDER MENU---------"
-#define EDIT_ORDER_PRIORITY "|1-Edit Order Priority           |"
-#define EDIT_ORDER_STATUS "|2-Edit Order Status             |"
-#define EDIT_ORDER_FULFILLMENT "|3-Edit Order Fulfillment        |"
-#define EDIT_ORDER_CUSTOMER "|4-Edit Order Customer           |"
-#define EDIT_ORDER_PRODUCTS "|5-Edit Order Products           |"
+#define EDIT_ORDER_PRIORITY "| 1-Edit Order Priority          |"
+#define EDIT_ORDER_FULFILLMENT "| 2-Edit Order Fulfillment       |"
+#define EDIT_CANCEL_ORDER "| 3-Cancel Order                 |"
+#define EDIT_ORDER_CUSTOMER "| 4-Edit Order Customer          |"
+#define EDIT_ORDER_PRODUCTS "| 5-Edit Order Products          |"
 #define EDIT_ORDER_GET_PRIORITY "Select new priority: "
 #define EDIT_ORDER_GET_STATUS "Select new status: "
 
