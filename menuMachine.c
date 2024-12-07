@@ -5,6 +5,7 @@ void MachineMenu(Management *management) {
     do {
         MachineMenuOutput();
         scanf("%d", &menu);
+        ClearInputBuffer();
         switch (menu) {
             case 1:
                 CreateMachine(management);
@@ -32,7 +33,7 @@ int MachineTypeMenu() {
     do {
         MachineTypeMenuOutput();
         scanf("%d", &type);
-
+        ClearInputBuffer();
         if (type < 1 || type > 7) {
             puts(ERROR_MENU);
         }
@@ -46,7 +47,7 @@ int MachineStatusMenu() {
     do {
         MachineStatusMenuOutput();
         scanf("%d", &status);
-
+        ClearInputBuffer();
         if (status < 1 || status > 3) {
             puts(ERROR_MENU);
         }
