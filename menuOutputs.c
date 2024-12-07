@@ -92,7 +92,7 @@ void CustomerEditMenuOutput() {
     puts(EDIT_CUSTOMER_EMAIL);
     puts(EDIT_CUSTOMER_NIF);
     puts(EDIT_CUSTOMER_STATUS);
-    puts(EDIT_CUSTOMER_END);
+    puts(EXIT);
     puts(MENU_BOTTOM);
     puts(MENU_OPTION);
 }
@@ -101,7 +101,7 @@ void CustomerEditStatusMenuOutput() {
     puts(EDIT_CUSTOMER_STATUS_MENU_HEADER);
     puts(EDIT_CUSTOMER_ACTIVATE_STATUS);
     puts(EDIT_CUSTOMER_INACTIVE_STATUS);
-    puts(EDIT_CUSTOMER_STATUS_END);
+    puts(EXIT);
     puts(MENU_BOTTOM);
     puts(MENU_OPTION);
 }
@@ -110,7 +110,7 @@ void CustomerListMenuOutput() {
     puts(CUSTOMER_LIST_MENU_HEADER);
     puts(LIST_CUSTOMER);
     puts(LIST_CUSTOMER_BY_NAME);
-    puts(LIST_CUSTOMER_STATUS_END);
+    puts(EXIT);
     puts(MENU_BOTTOM);
     puts(MENU_OPTION);
 }
@@ -162,6 +162,7 @@ void OrderListMenuOuput() {
     puts(ORDER_LIST_MENU_LIST);
     puts(ORDER_LIST_MENU_NAME);
     puts(ORDER_LIST_MENU_PRIORITY);
+    puts(EXIT);
     puts(MENU_BOTTOM);
     puts(MENU_OPTION);
 }
