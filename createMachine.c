@@ -11,7 +11,6 @@ void CreateMachine (Management *management){
     }
     
     management->machine[management->machine_counter]->id = management->machine_counter + 1;
-    ClearInputBuffer();
     
     puts(CREATE_MACHINE_NAME);
     fgets(management->machine[management->machine_counter]->name, MACHINE_NAME_SIZE, stdin);
