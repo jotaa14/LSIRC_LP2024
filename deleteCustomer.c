@@ -29,14 +29,3 @@ void DeleteCustomer(Management *management) {
         puts(ERROR_CUSTOMER_DELETE_STATUS);
     }
 }
-
-void CleanDataCustomer(Customer *customer) {
-    customer->id = 0;
-    strcpy(customer->name, "");
-    customer->phone_number = 0;
-    strcpy(customer->email, "");
-    customer->nif = 0;
-    customer->registration_day = 0;
-    customer->registration_month = 0;
-    customer->registration_year = 0;
-}
