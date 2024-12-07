@@ -5,6 +5,7 @@ void CustomerMenu(Management *management) {
     do {
         CustomerMenuOutput();
         scanf("%d", &menu);
+        ClearInputBuffer();
         switch (menu) {
             case 1:
                 CreateCustomers(management);
@@ -32,6 +33,7 @@ void CustomerListMenu(Management *management) {
     do {
         CustomerListMenuOutput();
         scanf("%d", &menu);
+        ClearInputBuffer();
         switch (menu) {
             case 1:
                 ListCustomers(management);
