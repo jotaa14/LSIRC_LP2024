@@ -9,6 +9,7 @@ extern "C" {
 #define ORDERS_SIZE 100
 #define MIN_FULFILLMENT_VALUE 0
 #define MAX_FULFILLMENT_VALUE 100
+#define MAX_ORDERED_PRODUCTS 200
 
 #ifdef __cplusplus
 }
