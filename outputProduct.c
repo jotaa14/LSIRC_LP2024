@@ -41,6 +41,7 @@ void PrintProducts(Product *product) {
     printf(PRODUCT_CATEGORY, PrintProductCategory(ACCESS_PRODUCT_CATEGORY));
     printf(PRODUCT_TOTAL_TIME, product->total_hours, product->total_minutes, product->total_seconds);
     printf(PRODUCT_STATUS, ACCESS_PRODUCT_STATUS);
+    printf(PRODUCT_SELLED, product->total_selled);
     printf(PRODUCT_PVP, product->pvp);
     puts(MENU_BOTTOM);
 }
@@ -73,5 +74,36 @@ void ListProductsByCategories(Management *management) {
         }
     }else{
         puts(ERROR_NO_PRODUCTS);
+    }
+}
+
+void ListProductsByHighestDemand(Management *management){
+    if (management->product_counter <= 0) {
+        puts(ERROR_NO_PRODUCTS);
+        return;
+    }
+
+    int product_indices[PRODUCTS_SIZE];
+    for (int i = 0; i < management->product_counter; i++) {
+        product_indices[i] = i;
+    }
+
+    for (int i = 0; i < management->product_counter - 1; i++) {
+        for (int j = i + 1; j < management->product_counter; j++) {
+            Product *product_i = management->product[product_indices[i]];
+            Product *product_j = management->product[product_indices[j]];
+
+            if (product_j->total_selled > product_i->total_selled) {
+                int temp = product_indices[i];
+                product_indices[i] = product_indices[j];
+                product_indices[j] = temp;
+            }
+        }
+    }
+
+    
+    for (int i = 0; i < management->product_counter; i++) {
+        Product *product = management->product[product_indices[i]];
+        PrintProducts(product);
     }
 }
