@@ -26,6 +26,7 @@ void ProductListMenuOutput() {
     puts(PRODUCT_LIST_MENU_HEADER);
     puts(LIST_PRODUCTS);
     puts(LIST_PRODUCTS_BY_CATEGORY);
+    puts(LIST_PROCESS_FOR_PRODUCTS);
     puts(LIST_DEMAND_FOR_PRODUCTS);
     puts(EXIT);
     puts(MENU_BOTTOM);
@@ -135,6 +136,14 @@ void OrderPriorityMenuOutput() {
     puts(MENU_OPTION);
 }
 
+void AssociateProductWithOrderOutput(){
+    puts(ASSOCIATE_PRODUCT_MENU_HEADER);
+    puts(ASSOCIATE_PRODUCT_MENU_ADD_OPTION);
+    puts(EXIT);
+    puts(MENU_BOTTOM);
+    puts(MENU_OPTION);
+}
+
 void OrderEditMenuOutput() {
     puts(ORDER_EDIT_MENU_HEADER);
     puts(EDIT_ORDER_PRIORITY);
@@ -150,7 +159,7 @@ void OrderEditMenuOutput() {
 void OrderListMenuOuput() {
     puts(ORDER_LIST_MENU_HEADER);
     puts(ORDER_LIST_MENU_LIST);
-    puts(ORDER_LIST_MENU_NAME);
+    puts(ORDER_LIST_MENU_DEATAILS);
     puts(ORDER_LIST_MENU_PRIORITY);
     puts(EXIT);
     puts(MENU_BOTTOM);
