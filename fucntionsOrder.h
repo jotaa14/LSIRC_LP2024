@@ -7,11 +7,13 @@ extern "C" {
 
 //utilOrder.c
 int GetOrderPosition(Management management, int number);
+int ChooseOrder(Management *management);
 void AssociateStatusToFulfillment (Management *management, int id);
+void UpdateTotalPurchasedProducts (Management *management, int id);
 //createOrder.c
 void CreateOrder(Management *management);
 void AssociateCustomerWithOrder(Management *management);
-//void AssociateProductWithOrder(Management *management);
+void AssociateProductWithOrder(Management *management);
 //editOrder.c
 void EditOrder (Management *management);
 //deleteOrder.c
@@ -21,6 +23,7 @@ char* PrintOrderPriority(Priority priority);
 char* PrintOrderStatus(StatusOrder statusorder);
 int PrintOrders(Order *order);
 void ListOrders(Management *management);
+void DisplayOrderDetails(Management *management);
 //menuOrder.c
 void OrderMenu(Management *management);
 void OrderListMenu(Management *management);
