@@ -43,7 +43,13 @@ void ProductListMenu(Management *management) {
                 break;
             case 3:
                 int product_id = ChooseProduct(management);
+                if(product_id == -1){
+                    return;
+                }
                 ListProductsProcesses(management, product_id);
+                break;
+            case 4:
+                ListProductsByHighestDemand(management);
                 break;
             case 0:
                 break;
