@@ -69,14 +69,15 @@ extern "C" {
 #define PRODUCT_LIST_MENU_HEADER "---------PRODUCT LIST MENU--------"
 #define LIST_PRODUCTS "| 1-List Products                |"
 #define LIST_PRODUCTS_BY_CATEGORY "| 2-List Products By Category    |"
-#define LIST_DEMAND_FOR_PRODUCTS "| 3-List Demand For Products     |"
-
+#define LIST_PROCESS_FOR_PRODUCTS "| 3-List Process For Product     |"
+#define LIST_DEMAND_FOR_PRODUCTS "| 4-List Demand For Products     |"
 //PRODUCT LIST DESIGN
 #define PRODUCT_ID "\nProduct ID: %d"
 #define PRODUCT_NAME "\nProduct Name: %s"
 #define PRODUCT_CATEGORY "\nProduct Category: %s"
 #define PRODUCT_TOTAL_TIME "\nTotal Time: %02d:%02d:%02d"
-#define PRODUCT_STATUS "\nStatus: %s"  
+#define PRODUCT_STATUS "\nStatus: %s"
+#define PRODUCT_SELLED "\nQuantity Selled: %d"
 #define PRODUCT_PVP "\nPVP: %.2f euros\n"
     
 #define PROCESS_ID "\nProcess ID: %d"
