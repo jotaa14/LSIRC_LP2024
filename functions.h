@@ -12,6 +12,7 @@ extern "C" {
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
+#include <stdbool.h>
 
 #include "structs.h"
 #include "design.h"
@@ -56,6 +57,7 @@ void CustomerListMenuOutput();
 
 void OrderMenuOutput();
 void OrderPriorityMenuOutput();
+void AssociateProductWithOrderOutput();
 void OrderEditMenuOutput();
 void OrderListMenuOuput();
 
