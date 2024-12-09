@@ -94,9 +94,10 @@ typedef struct {
     int total_hours;
     int total_minutes;
     int total_seconds;
+    int total_selled;
 } Product;
 
-typedef struct{
+typedef struct {
     int orderid;
     int registration_day;
     int registration_month;
@@ -106,8 +107,10 @@ typedef struct{
     int fulfillment;
     Customer *customer;
     Product *product[PRODUCTS_SIZE];
+    int product_quantity[PRODUCTS_SIZE];
     int order_pvp;
-}Order;
+} Order;
+
 
 
 typedef struct{
