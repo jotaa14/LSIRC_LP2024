@@ -27,6 +27,7 @@ void ListProductsProcesses(Management *management, int product_id);
 void PrintProducts(Product *product);
 void ListProducts(Management *management);
 void ListProductsByCategories(Management *management);
+void ListProductsByHighestDemand(Management *management);
 //menuProduct.c
 void ProductMenu(Management *management);
 void ProductListMenu(Management *management);
