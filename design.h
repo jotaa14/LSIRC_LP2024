@@ -11,7 +11,7 @@ extern "C" {
 
 //ERROR DESIGN
 #define ERROR_INPUT "ERROR: Failed to read input!\n"
-#define ERROR_MENU "ERROR: The chosen option is invalid!"
+#define ERROR_MENU "ERROR: Invalid option!"
 #define ERROR_PRODUCTS_REACHED "ERROR: Maximum number of products reached!"
 #define ERROR_MEMORY_ALLOCATION "ERROR: Memory allocation failed!"
 #define ERROR_INVALID_VALUE "ERROR: The value enteered is ivalid!"
