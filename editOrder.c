@@ -35,9 +35,11 @@ void EditOrder (Management *management){
                 if(management->order[id]->fulfillment==0){
                     int statusorder = 3;
                     management->order[id]->statusorder = (StatusOrder) statusorder;
+                    UpdateTotalPurchasedProducts(management, id);
                 }else{
                     puts(ERROR_STATUS_CANCELED_CANNOT_BE_SELECTED);
                 }
+                
                 break;
             case 4:
                 
