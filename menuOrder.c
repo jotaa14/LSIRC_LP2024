@@ -53,7 +53,7 @@ void OrderListMenu(Management *management) {
                 ListOrders(management);
                 break;
             case 2:
-                //ListOrdersByName(management);
+                DisplayOrderDetails(management);
                 break;
             case 3:
                 //ListOrdersByPriority(management);
